@@ -1,0 +1,14 @@
+## An easy example --- many companies offer a single service
+## The optimal solution is to buy companies 2 and 4, which collectively offer services {2, 4, 5}.
+## This yields a value of 2.0 + 4.0 + 1.0 + 3.0, where the 1.0 and 3.0 comes from the cost of not covering services 1 and 3.
+5
+4
+1.0
+2.0
+3.0
+4.0
+5.0
+15 1
+2.0 2
+5.0 3
+4.0 4 5
