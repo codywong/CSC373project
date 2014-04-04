@@ -1,13 +1,17 @@
+import time
+start_time = time.time()
+
+
 import sys
 import math
-file = open('test3.dat') #sys.stdin
+file = open('q1_medium.dat') #sys.stdin
 
 
             
 def reachable(transmitters, i, current):
     a = transmitters[i]
     b = transmitters[current]
-    distance = math.sqrt((a[0]-b[0])**2 + (a[1]-b[1])**2)
+    distance = ((a[0]-b[0])**2 + (a[1]-b[1])**2)**0.5
     return (distance <= a[2]+b[2])
 
 #main
@@ -29,6 +33,9 @@ for line in file:
                 if reachable(transmitters, i, current):
                     neighbours[i].append(current)
                     neighbours[current].append(i)
+
+    
+
 
 
 #queue storing [cost, transmitter]
@@ -52,3 +59,5 @@ while queue != []:
     
 print(results)
                 
+                
+print(time.time() - start_time, "seconds")
